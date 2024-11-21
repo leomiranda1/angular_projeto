@@ -1,0 +1,9 @@
+<section>
+    <form>
+      <input type="text" placeholder="Filtre pelo nome" #filter />
+      <button type="button" (click)="filterUsers(filter.value)">Filtrar</button>
+    </form>
+  </section>
+  <section class="results">
+    <app-card-user *ngFor="let user of filteredUserList" [user]="user"></app-card-user>
+  </section>
